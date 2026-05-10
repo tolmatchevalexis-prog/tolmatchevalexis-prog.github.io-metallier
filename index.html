@@ -435,6 +435,17 @@
 
     .gallery-item:hover { border-color: var(--forge-dim); }
 
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      cursor: zoom-in;
+      transition: transform .3s ease;
+    }
+
+    .gallery-item:hover img { transform: scale(1.03); }
+
     .gallery-item .ph {
       display: flex;
       flex-direction: column;
@@ -775,46 +786,33 @@
     <h2>Galerie</h2>
     <div class="gallery-grid reveal">
       <!-- Remplacer chaque bloc par : <img src="nom-photo.jpg" alt="Description"> -->
-      <!-- 01 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>01</span></div></div>
-      <!-- 02 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>02</span></div></div>
-      <!-- 03 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>03</span></div></div>
-      <!-- 04 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>04</span></div></div>
-      <!-- 05 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>05</span></div></div>
-      <!-- 06 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>06</span></div></div>
-      <!-- 07 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>07</span></div></div>
-      <!-- 08 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>08</span></div></div>
-      <!-- 09 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>09</span></div></div>
-      <!-- 10 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>10</span></div></div>
-      <!-- 11 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>11</span></div></div>
-      <!-- 12 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>12</span></div></div>
-      <!-- 13 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>13</span></div></div>
-      <!-- 14 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>14</span></div></div>
-      <!-- 15 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>15</span></div></div>
-      <!-- 16 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>16</span></div></div>
-      <!-- 17 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>17</span></div></div>
-      <!-- 18 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>18</span></div></div>
-      <!-- 19 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>19</span></div></div>
-      <!-- 20 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>20</span></div></div>
-      <!-- 21 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>21</span></div></div>
-      <!-- 22 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>22</span></div></div>
-      <!-- 23 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>23</span></div></div>
-      <!-- 24 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>24</span></div></div>
-      <!-- 25 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>25</span></div></div>
-      <!-- 26 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>26</span></div></div>
-      <!-- 27 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>27</span></div></div>
-      <!-- 28 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>28</span></div></div>
-      <!-- 29 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>29</span></div></div>
-      <!-- 30 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>30</span></div></div>
-      <!-- 31 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>31</span></div></div>
-      <!-- 32 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>32</span></div></div>
-      <!-- 33 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>33</span></div></div>
-      <!-- 34 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>34</span></div></div>
-      <!-- 35 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>35</span></div></div>
-      <!-- 36 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>36</span></div></div>
-      <!-- 37 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>37</span></div></div>
-      <!-- 38 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>38</span></div></div>
-      <!-- 39 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>39</span></div></div>
-      <!-- 40 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>40</span></div></div>
+      <!-- 01 --><div class="gallery-item"><img src="At-01.jpg" alt="Réalisation At-01"></div>
+      <!-- 02 --><div class="gallery-item"><img src="At-02.jpg" alt="Réalisation At-02"></div>
+      <!-- 03 --><div class="gallery-item"><img src="At-03.jpg" alt="Réalisation At-03"></div>
+      <!-- 04 --><div class="gallery-item"><img src="At-04.jpg" alt="Réalisation At-04"></div>
+      <!-- 05 --><div class="gallery-item"><img src="At-05.jpg" alt="Réalisation At-05"></div>
+      <!-- 06 --><div class="gallery-item"><img src="At-06.jpg" alt="Réalisation At-06"></div>
+      <!-- 07 --><div class="gallery-item"><img src="At-07.jpg" alt="Réalisation At-07"></div>
+      <!-- 08 --><div class="gallery-item"><img src="At-08.jpg" alt="Réalisation At-08"></div>
+      <!-- 09 --><div class="gallery-item"><img src="At-09.jpg" alt="Réalisation At-09"></div>
+      <!-- 10 --><div class="gallery-item"><img src="At-10.jpg" alt="Réalisation At-10"></div>
+      <!-- 11 --><div class="gallery-item"><img src="At-11.jpg" alt="Réalisation At-11"></div>
+      <!-- 12 --><div class="gallery-item"><img src="At-12.jpg" alt="Réalisation At-12"></div>
+      <!-- 13 --><div class="gallery-item"><img src="At-13.jpg" alt="Réalisation At-13"></div>
+      <!-- 14 --><div class="gallery-item"><img src="At-14.jpg" alt="Réalisation At-14"></div>
+      <!-- 15 --><div class="gallery-item"><img src="At-15.jpg" alt="Réalisation At-15"></div>
+      <!-- 16 --><div class="gallery-item"><img src="At-16.jpg" alt="Réalisation At-16"></div>
+      <!-- 17 --><div class="gallery-item"><img src="At-17.jpg" alt="Réalisation At-17"></div>
+      <!-- 18 --><div class="gallery-item"><img src="At-18.jpg" alt="Réalisation At-18"></div>
+      <!-- 19 --><div class="gallery-item"><img src="At-19.jpg" alt="Réalisation At-19"></div>
+      <!-- 20 --><div class="gallery-item"><img src="At-20.jpg" alt="Réalisation At-20"></div>
+      <!-- 21 --><div class="gallery-item"><img src="At-21.jpg" alt="Réalisation At-21"></div>
+      <!-- 22 --><div class="gallery-item"><img src="At-22.jpg" alt="Réalisation At-22"></div>
+      <!-- 23 --><div class="gallery-item"><img src="At-23.jpg" alt="Réalisation At-23"></div>
+      <!-- 24 --><div class="gallery-item"><img src="At-24.jpg" alt="Réalisation At-24"></div>
+      <!-- 25 --><div class="gallery-item"><img src="At-25.jpg" alt="Réalisation At-25"></div>
+      <!-- 26 --><div class="gallery-item"><img src="At-26.jpg" alt="Réalisation At-26"></div>
+      <!-- 27 --><div class="gallery-item"><img src="At-27.jpg" alt="Réalisation At-27"></div>
     </div>
   </section>
 
