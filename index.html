@@ -89,13 +89,23 @@
 
     /* ── HERO ─────────────────────────────── */
     #hero {
-      min-height: 100vh;
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/3;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: 0 2.5rem 5rem;
-      position: relative;
+      padding: 0 2.5rem 4rem;
       overflow: hidden;
+    }
+
+    #hero video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
     }
 
     .hero-bg {
@@ -628,12 +638,6 @@
 
     /* ── ANIMATIONS ───────────────────────── */
     .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity .6s ease, transform .6s ease;
-    }
-
-    .reveal.visible {
       opacity: 1;
       transform: none;
     }
@@ -667,12 +671,16 @@
 
   <!-- HERO -->
   <div id="hero">
+    <!-- Remplacer src par le chemin de ta vidéo : <source src="video.mp4" type="video/mp4"> -->
+    <video autoplay muted loop playsinline>
+      <source src="" type="video/mp4">
+    </video>
     <div class="hero-bg">
       <div class="hero-line"></div>
       <div class="hero-line"></div>
     </div>
     <div class="hero-content">
-      <div class="hero-tag">Ouvrages métalliques · Métallerie d'art · Paris</div>
+      <div class="hero-tag">Ouvrages métalliques · Métallerie d'art</div>
       <p class="hero-sub">
         Fabrication sur mesure<span>·</span>Structures<span>·</span>Commandes artistiques
       </p>
@@ -910,7 +918,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="ft-logo">Alexis <span>TOLMATCHEV</span></div>
-    <p>Artisan Métallier · Paris · © 2026</p>
+    <p>Artisan Métallier · © 2026</p>
   </footer>
 
   <script>
