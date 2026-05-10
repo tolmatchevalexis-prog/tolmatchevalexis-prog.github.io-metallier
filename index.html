@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alexis Tolmatchev — Artisan Métallier</title>
+  <title>Alexis TOLMATCHEV — Ouvrages métalliques</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500&family=Barlow+Condensed:wght@400;600&display=swap" rel="stylesheet" />
   <style>
@@ -13,11 +13,11 @@
       --bg:        #080807;
       --surface:   #111110;
       --border:    #2a2a28;
-      --steel:     #8a8880;
-      --light:     #d4d0c8;
-      --forge:     #e05c00;
-      --forge-dim: #7a3200;
-      --text:      #c8c4bc;
+      --steel:     #6a6a68;
+      --light:     #f0ece4;
+      --forge:     #d4d0c8;
+      --forge-dim: #4a4a48;
+      --text:      #a8a49c;
       --font-display: 'Bebas Neue', sans-serif;
       --font-cond:    'Barlow Condensed', sans-serif;
       --font-body:    'Barlow', sans-serif;
@@ -102,7 +102,7 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 60% 50% at 70% 40%, rgba(224,92,0,.08) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 50% at 70% 40%, rgba(255,255,255,.03) 0%, transparent 70%),
         radial-gradient(ellipse 80% 60% at 20% 80%, rgba(0,0,0,.8) 0%, transparent 80%),
         repeating-linear-gradient(
           105deg,
@@ -406,8 +406,7 @@
     /* ── GALERIE ──────────────────────────── */
     #galerie .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: auto auto;
+      grid-template-columns: repeat(4, 1fr);
       gap: 6px;
       margin-top: 1rem;
     }
@@ -422,11 +421,6 @@
       align-items: center;
       justify-content: center;
       transition: border-color .25s;
-    }
-
-    .gallery-item:first-child {
-      grid-column: span 2;
-      aspect-ratio: 16/9;
     }
 
     .gallery-item:hover { border-color: var(--forge-dim); }
@@ -452,6 +446,56 @@
       text-transform: uppercase;
       color: var(--border);
     }
+
+    /* ── RÉFÉRENCES ───────────────────────── */
+    #references { background: var(--surface); max-width: 100%; padding: 6rem 2.5rem; border-top: 1px solid var(--border); }
+    #references > .inner { max-width: 1100px; margin: 0 auto; }
+
+    .ref-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+      margin-top: 1rem;
+    }
+
+    .ref-col-title {
+      font-family: var(--font-cond);
+      font-size: .7rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--forge);
+      margin-bottom: 1.5rem;
+      padding-bottom: .8rem;
+      border-bottom: 1px solid var(--forge-dim);
+    }
+
+    .ref-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+
+    .ref-list li {
+      font-family: var(--font-cond);
+      font-size: .95rem;
+      font-weight: 400;
+      color: var(--steel);
+      letter-spacing: .04em;
+      padding-left: 1rem;
+      position: relative;
+      transition: color .2s;
+    }
+
+    .ref-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--forge-dim);
+      font-size: .8rem;
+    }
+
+    .ref-list li:hover { color: var(--light); }
 
     /* ── CONTACT ──────────────────────────── */
     #contact { border-top: 1px solid var(--border); }
@@ -548,7 +592,7 @@
       margin-top: .5rem;
     }
 
-    .btn-send:hover { background: #c45000; }
+    .btn-send:hover { background: #e8e4dc; }
 
     /* ── FOOTER ───────────────────────────── */
     footer {
@@ -611,11 +655,12 @@
 
   <!-- NAV -->
   <nav>
-    <a class="logo" href="#hero">A<span>.</span>TOLMATCHEV</a>
+    <a class="logo" href="#hero">Alexis <span>TOLMATCHEV</span></a>
     <ul>
       <li><a href="#presentation">Atelier</a></li>
       <li><a href="#services">Prestations</a></li>
       <li><a href="#galerie">Galerie</a></li>
+      <li><a href="#references">Références</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -627,13 +672,9 @@
       <div class="hero-line"></div>
     </div>
     <div class="hero-content">
-      <div class="hero-tag">Artisan métallier · Paris</div>
-      <h1>
-        MÉTAL<br>
-        <span class="dim">FORGÉ.</span>
-      </h1>
+      <div class="hero-tag">Ouvrages métalliques · Métallerie d'art · Paris</div>
       <p class="hero-sub">
-        Fabrication sur mesure<span>·</span>Structures & Verrières<span>·</span>Commandes artistiques
+        Fabrication sur mesure<span>·</span>Structures<span>·</span>Commandes artistiques
       </p>
     </div>
     <div class="scroll-hint">Défiler</div>
@@ -642,21 +683,21 @@
   <!-- PRÉSENTATION -->
   <section id="presentation">
     <div class="section-label">L'atelier</div>
-    <div class="grid reveal">
+    <div class="reveal">
       <div>
-        <h2>Travail du métal, de la matière à l'œuvre.</h2>
+        <h2>Le travail du métal, de la matière à l'ouvrage.</h2>
         <p>
-          Artisan métallier installé à Paris, je réalise des <strong>pièces uniques et des fabrications sur mesure</strong> pour particuliers, architectes et acteurs culturels.
+          Artisan métallier formé auprès de compagnons, je réalise des <strong>pièces uniques et des ouvrages sur mesure</strong> pour des architectes, des lieux d'art et des particuliers.
         </p>
         <p>
-          Mon atelier prend en charge l'ensemble du processus — de la conception au montage — avec une exigence constante sur la qualité du métal, la précision des assemblages et la durabilité du résultat.
+          Mon travail prend en charge l'ensemble du processus — de la conception au montage — avec une exigence constante sur la qualité technique, la précision de la réalisation et la durabilité du résultat.
         </p>
         <p>
-          Formé à la pratique du métal depuis des décennies, j'interviens aussi bien sur des <strong>projets architecturaux</strong> (verrières, garde-corps, escaliers) que sur des commandes <strong>artistiques ou scénographiques</strong>.
+          Formé à la pratique du métal depuis des décennies, j'interviens aussi bien sur des <strong>projets architecturaux</strong> (verrières, garde-corps, escaliers, grilles, portails) que sur des commandes <strong>artistiques ou scénographiques</strong>.
         </p>
         <div class="stat-row">
           <div class="stat">
-            <span class="stat-n">25+</span>
+            <span class="stat-n">15+</span>
             <span class="stat-l">Ans d'expérience</span>
           </div>
           <div class="stat">
@@ -664,17 +705,10 @@
             <span class="stat-l">Sur mesure</span>
           </div>
           <div class="stat">
-            <span class="stat-n">Paris</span>
-            <span class="stat-l">& Île-de-France</span>
+            <span class="stat-n">Roubaix</span>
+            <span class="stat-l">& Hauts-de-France</span>
           </div>
         </div>
-      </div>
-      <div class="presentation-visual">
-        <div class="placeholder-img">
-          <svg viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="32" rx="1"/><line x1="8" y1="24" x2="40" y2="24"/><line x1="24" y1="8" x2="24" y2="40"/></svg>
-          <span>Photo atelier à venir</span>
-        </div>
-        <div class="pv-label">Atelier · Paris</div>
       </div>
     </div>
   </section>
@@ -732,59 +766,112 @@
     <div class="section-label">Réalisations</div>
     <h2>Galerie</h2>
     <div class="gallery-grid reveal">
-      <!-- Placeholder items — à remplacer par <img src="..." alt="..."> -->
-      <div class="gallery-item">
-        <div class="ph">
-          <svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg>
-          <span>Photo à venir</span>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="ph">
-          <svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg>
-          <span>Photo à venir</span>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="ph">
-          <svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg>
-          <span>Photo à venir</span>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="ph">
-          <svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg>
-          <span>Photo à venir</span>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="ph">
-          <svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg>
-          <span>Photo à venir</span>
-        </div>
-      </div>
+      <!-- Remplacer chaque bloc par : <img src="nom-photo.jpg" alt="Description"> -->
+      <!-- 01 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>01</span></div></div>
+      <!-- 02 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>02</span></div></div>
+      <!-- 03 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>03</span></div></div>
+      <!-- 04 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>04</span></div></div>
+      <!-- 05 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>05</span></div></div>
+      <!-- 06 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>06</span></div></div>
+      <!-- 07 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>07</span></div></div>
+      <!-- 08 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>08</span></div></div>
+      <!-- 09 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>09</span></div></div>
+      <!-- 10 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>10</span></div></div>
+      <!-- 11 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>11</span></div></div>
+      <!-- 12 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>12</span></div></div>
+      <!-- 13 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>13</span></div></div>
+      <!-- 14 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>14</span></div></div>
+      <!-- 15 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>15</span></div></div>
+      <!-- 16 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>16</span></div></div>
+      <!-- 17 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>17</span></div></div>
+      <!-- 18 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>18</span></div></div>
+      <!-- 19 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>19</span></div></div>
+      <!-- 20 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>20</span></div></div>
+      <!-- 21 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>21</span></div></div>
+      <!-- 22 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>22</span></div></div>
+      <!-- 23 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>23</span></div></div>
+      <!-- 24 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>24</span></div></div>
+      <!-- 25 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>25</span></div></div>
+      <!-- 26 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>26</span></div></div>
+      <!-- 27 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>27</span></div></div>
+      <!-- 28 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>28</span></div></div>
+      <!-- 29 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>29</span></div></div>
+      <!-- 30 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>30</span></div></div>
+      <!-- 31 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>31</span></div></div>
+      <!-- 32 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>32</span></div></div>
+      <!-- 33 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>33</span></div></div>
+      <!-- 34 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>34</span></div></div>
+      <!-- 35 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>35</span></div></div>
+      <!-- 36 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>36</span></div></div>
+      <!-- 37 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>37</span></div></div>
+      <!-- 38 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>38</span></div></div>
+      <!-- 39 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>39</span></div></div>
+      <!-- 40 --><div class="gallery-item"><div class="ph"><svg viewBox="0 0 36 36"><rect x="4" y="4" width="28" height="28" rx="1"/><circle cx="13" cy="13" r="3"/><polyline points="4,24 12,16 18,22 24,17 32,26"/></svg><span>40</span></div></div>
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- RÉFÉRENCES -->
+  <div id="references">
+    <div class="inner">
+      <div class="section-label">Ils m'ont fait confiance</div>
+      <h2>Références</h2>
+      <div class="ref-grid reveal">
+        <div>
+          <div class="ref-col-title">Lieux</div>
+          <ul class="ref-list">
+            <li>Palais de Tokyo</li>
+            <li>Lafayette Anticipation</li>
+            <li>Fondation Fiminco</li>
+            <li>Le Plateau</li>
+            <li>Poush</li>
+            <li>Le Vieux Colombier</li>
+          </ul>
+        </div>
+        <div>
+          <div class="ref-col-title">Artistes</div>
+          <ul class="ref-list">
+            <li>Daiga Grantina</li>
+            <li>Tomás Saraceno</li>
+            <li>Antoine Renard</li>
+            <li>Anne Imhof</li>
+            <li>Marguerite Humeau</li>
+            <li>Marie-Pierre Messouma</li>
+            <li>David Douar</li>
+            <li>Pierre Hardouvin</li>
+          </ul>
+        </div>
+        <div>
+          <div class="ref-col-title">Studios de décor</div>
+          <ul class="ref-list">
+            <li>20.12</li>
+            <li>Octopus</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
   <section id="contact">
     <div class="section-label">Devis & Contact</div>
-    <h2>Travaillons ensemble.</h2>
+    <h2>Vous avez un projet.</h2>
     <div class="contact-layout reveal">
       <div class="contact-info">
-        <p>Vous avez un projet architectural, de rénovation, ou une commande sur mesure ? Décrivez-le moi, je vous réponds sous 48h avec une première estimation.</p>
+        <p>Décrivez le moi, je vous réponds au plus vite avec une estimation.</p>
         <div class="contact-detail">
-          <a href="mailto:contact@tolmatchev.fr" class="cd-item">
+          <a href="mailto:tolmatchev.alexis@gmail.com" class="cd-item">
             <span class="cd-icon">✉</span>
-            contact@tolmatchev.fr
+            tolmatchev.alexis@gmail.com
           </a>
-          <a href="tel:+33600000000" class="cd-item">
+          <a href="tel:+33753884275" class="cd-item">
             <span class="cd-icon">◎</span>
-            +33 6 00 00 00 00
+            07 53 88 42 75
+          </a>
+          <a href="https://instagram.com/alexistolmatchev" target="_blank" class="cd-item">
+            <span class="cd-icon">◈</span>
+            @alexistolmatchev
           </a>
           <div class="cd-item">
             <span class="cd-icon">◈</span>
-            Atelier — Paris, Île-de-France
+            Atelier — Roubaix, Hauts-de-France
           </div>
         </div>
       </div>
@@ -822,7 +909,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="ft-logo">A<span>.</span>TOLMATCHEV</div>
+    <div class="ft-logo">Alexis <span>TOLMATCHEV</span></div>
     <p>Artisan Métallier · Paris · © 2026</p>
   </footer>
 
@@ -850,7 +937,101 @@
         btn.style.background = '';
       }, 3000);
     }
+
+    // Lightbox
+    const lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    lightbox.innerHTML = `
+      <div id="lb-overlay"></div>
+      <div id="lb-content">
+        <img id="lb-img" src="" alt="" />
+        <button id="lb-close">✕</button>
+      </div>`;
+    document.body.appendChild(lightbox);
+
+    const lbOverlay = document.getElementById('lb-overlay');
+    const lbContent = document.getElementById('lb-content');
+    const lbImg    = document.getElementById('lb-img');
+    const lbClose  = document.getElementById('lb-close');
+
+    function openLightbox(src, alt) {
+      lbImg.src = src;
+      lbImg.alt = alt || '';
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+      setTimeout(() => { lbImg.src = ''; }, 300);
+    }
+
+    lbOverlay.addEventListener('click', closeLightbox);
+    lbClose.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    // Attach to all gallery images (real imgs only)
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', () => openLightbox(img.src, img.alt));
+    });
   </script>
+
+  <style>
+    #lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+    }
+    #lightbox.active { display: flex; }
+
+    #lb-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,.75);
+      animation: lbfade .25s ease;
+    }
+
+    #lb-content {
+      position: relative;
+      z-index: 1;
+      max-width: 90vw;
+      max-height: 90vh;
+      animation: lbscale .25s ease;
+    }
+
+    #lb-img {
+      display: block;
+      max-width: 90vw;
+      max-height: 88vh;
+      object-fit: contain;
+      border: 1px solid #2a2a28;
+    }
+
+    #lb-close {
+      position: absolute;
+      top: -2.2rem;
+      right: 0;
+      background: none;
+      border: none;
+      color: #d4d0c8;
+      font-size: 1.1rem;
+      cursor: pointer;
+      font-family: 'Barlow Condensed', sans-serif;
+      letter-spacing: .1em;
+      opacity: .7;
+      transition: opacity .2s;
+    }
+
+    #lb-close:hover { opacity: 1; }
+
+    @keyframes lbfade  { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes lbscale { from { transform: scale(.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  </style>
 
 </body>
 </html>
